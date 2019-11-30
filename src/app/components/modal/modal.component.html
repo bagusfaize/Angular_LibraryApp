@@ -1,0 +1,34 @@
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Form Buku</h5>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="ID" class="col-form-label">ID:</label>
+            <input type="text" disabled class="form-control" formControlName="id">
+          </div>
+          <div class="form-group">
+            <label for="Judul" class="col-form-label">Judul:</label>
+            <input type="text" class="form-control" formControlName="judul">
+          </div>          
+          <div class="form-group">
+            <label for="Penerbit" class="col-form-label">Penerbit:</label>
+            <input type="text" class="form-control" formControlName="penerbit">
+          </div>
+          <div class="form-group">
+            <label for="Harga" class="col-form-label">Harga:</label>
+            <input type="text" class="form-control" formControlName="harga">
+          </div>
+          <div class="form-group">
+            <label for="Stok" class="col-form-label">Stok:</label>
+            <input type="text" class="form-control" formControlName="stok">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cross Click')">Close</button>
+        <button type="button" class="btn purple-bg" type="submit" (click)="updateBook()">Save</button>
+      </div>

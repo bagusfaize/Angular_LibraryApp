@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Segoe UI Light', sans-serif !important;
+
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #8E2DE2;
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.grad-bg {
+  background: #8E2DE2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.purple-bg{
+  color: white !important;
+  background: #8E2DE2 !important;
+}
+.purple-bg:active{
+  background: rgb(93, 19, 158) !important;
+}
+.bayangan{
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+}
+.bayangan:hover{
+  transform: translate(0,-2px);
+  box-shadow: 0px 10px 26px -11px rgba(0,0,0,0.2);
+  transition: all ease .25s;
+}

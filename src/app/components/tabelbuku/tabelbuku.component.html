@@ -1,0 +1,31 @@
+<div class="container mt-4" align="center">
+  <h4>Data Buku</h4>
+  <div class="col-10">
+    <button class="btn purple-bg float-left my-3" (click)="addBook()">Tambah Data</button>    
+    <button class="btn purple-bg float-left my-3 mx-2" (click)="getAll()">Refresh</button>      
+    <button class="btn purple-bg float-right my-3 mx-2" (click)="exportPdf()">Cetak Data</button>
+    <table class="table table-bordered my-4 bg-white">
+      <thead class="text-center">
+        <tr>
+          <th>Id</th>
+          <th>Judul</th>
+          <th>Penerbit</th>
+          <th>Harga</th>
+          <th>Stok</th>
+          <th colspan="2">Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of books">
+          <td>{{data.id}}</td>
+          <td>{{data.title}}</td>
+          <td>{{data.publisher}}</td>
+          <td>{{data.price}}</td>
+          <td>{{data.stock}}</td>
+          <td><button class="btn btn-sm btn-outline-primary mx-1" (click)="openModal(data.id)">Detail</button>
+            <button class="btn btn-sm btn-outline-danger mx-1" (click)="deleteById(data.id)">Hapus</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
